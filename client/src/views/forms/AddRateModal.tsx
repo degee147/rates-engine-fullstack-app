@@ -21,7 +21,7 @@ const ButtonStyled = styled(Button)<ButtonProps & { component?: ElementType; htm
 }))
 
 
-const AddRateModal = (setStatusBase) => {
+const AddRateModal = ({ fetchData, setStatusBase }) => {
   const [open, setOpen] = React.useState(false);
 
   const initialState = {
@@ -61,6 +61,8 @@ const AddRateModal = (setStatusBase) => {
         const { rate, msg } = data;
         setOpen(false);
         setStatusBase({ msg, key: Math.random() });
+        fetchData();
+
       } catch (error) {
         console.log(error);
         setStatusBase({ msg: "An error occured", key: Math.random() });

@@ -50,7 +50,7 @@ const Rates = () => {
                   <CardHeader title='Rates' titleTypographyProps={{ variant: 'h6' }} />
                 </Grid>
                 <Grid item xs={6} sm={2} sx={{ marginTop: 3 }}>
-                  <AddRateModal setStatusBase={setStatusBase} />
+                  <AddRateModal fetchData={fetchData}  setStatusBase={setStatusBase} />
                 </Grid>
               </Grid>
               <RatesTable rows={rows} fetchData={fetchData} setStatusBase={setStatusBase}  />
