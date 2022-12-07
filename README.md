@@ -1,3 +1,4 @@
+create .env file in server folder and copy contents from .env.temp
 
 Start Server app
 
